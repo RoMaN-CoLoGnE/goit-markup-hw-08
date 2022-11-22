@@ -1,0 +1,8 @@
+// common body styles
+body {
+  // @include fonts($family: 'Roboto', $fs: 14px, $cl: $basic-grey);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: $basic-grey;
+  background-color: $basic-white;
+}

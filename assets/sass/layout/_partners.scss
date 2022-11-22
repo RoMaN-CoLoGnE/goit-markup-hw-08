@@ -1,0 +1,47 @@
+// partners styles
+.partners {
+  @include section-indent;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+}
+
+.partners__list {
+  @include grid();
+}
+
+.partners__item {
+  @include grid-item(6);
+  width: 170px;
+  height: 92px;
+}
+
+.partners__link {
+  @include flex-center();
+
+  width: 100%;
+  height: 100%;
+  border: 1px solid $icon-gray;
+  border-radius: 4px;
+
+  color: $icon-gray;
+
+  transition: color $animation-timing-function, border-color $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $basic-blue;
+    border-color: $basic-blue;
+  }
+}
+
+.partners__icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}

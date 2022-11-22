@@ -1,0 +1,32 @@
+// subscribe form
+.subscribe__appeal {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $basic-white;
+}
+
+.subscribe__field {
+  @include flex-center($jc: null, $indent: 12px);
+}
+
+.subscribe__input {
+  padding: 15px 16px;
+  width: 358px;
+  border: 1px solid $form-border-grey;
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px $shadow-grey);
+  color: $link-grey;
+  background-color: inherit;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    letter-spacing: 0.03em;
+  }
+}

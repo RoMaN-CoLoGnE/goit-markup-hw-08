@@ -1,0 +1,92 @@
+// button styles
+.hero__button {
+  @extend %button;
+
+  min-width: 216px;
+  margin-top: 30px;
+  transition: background-color $animation-timing-function, box-shadow $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-blue;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.subscribe__button {
+  @extend %button;
+
+  gap: 10px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    background-image: url(../images/png/icon-send.png);
+    color: $basic-white;
+  }
+}
+
+.feedback__button {
+  @extend %button;
+
+  display: block;
+  margin: 0 auto;
+
+  transition: background-color $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-blue;
+  }
+}
+
+.portfolio__button {
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  // color: $basic-black;
+  background-color: $secondary-grey;
+  box-shadow: none;
+  cursor: pointer;
+
+  transition: color $animation-timing-function, background-color $animation-timing-function,
+    box-shadow $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $basic-white;
+    background-color: $basic-blue;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.modal__close-button {
+  @include flex-center();
+  @include position-absolute($top: 8px, $right: 8px);
+
+  padding: 0;
+  width: 30px;
+  height: 30px;
+
+  background-color: unset;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: fill $animation-timing-function;
+
+  &:hover {
+    fill: $basic-blue;
+  }
+}

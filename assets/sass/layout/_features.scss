@@ -1,0 +1,48 @@
+// features styles
+.features {
+  @include section-indent($pb: 0);
+
+  &__container {
+    @extend %container;
+  }
+
+  &__list {
+    @include grid();
+  }
+
+  &__item {
+    @include grid-item(4);
+  }
+
+  &__wrapper {
+    @include flex-center();
+
+    position: relative;
+
+    height: 120px;
+    background: $secondary-grey;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $basic-black;
+  }
+
+  &__text {
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: $basic-grey;
+  }
+}

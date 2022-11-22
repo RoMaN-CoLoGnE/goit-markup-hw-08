@@ -1,0 +1,146 @@
+// feedback form
+.feedback {
+  width: 100%;
+  height: 100%;
+}
+
+.feedback__appeal {
+  display: block;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $basic-black;
+}
+
+.feedback__label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: $basic-grey;
+}
+
+.feedback__field {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.feedback__input {
+  padding: 12px 42px;
+  width: 100%;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  transition: border-color $animation-timing-function;
+
+  &:focus {
+    border-color: $basic-blue;
+  }
+
+  &::placeholder {
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: $comment-grey;
+
+    opacity: 0;
+    transition: opacity $animation-timing-function;
+  }
+  &:focus::placeholder {
+    opacity: 1;
+  }
+}
+
+.feedback__icon {
+  @include position-absolute($top: 50%, $left: 12px);
+
+  width: 18px;
+  height: 18px;
+
+  pointer-events: none;
+  transform: translateY(-50%);
+  fill: $basic-black;
+
+  transition: fill $animation-timing-function;
+}
+
+.feedback__input:focus + .feedback__icon {
+  fill: $basic-blue;
+}
+
+.feedback__icon-alert {
+  @include position-absolute($top: 50%, $right: 12px);
+
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+}
+
+.feedback__icon-success,
+.feedback__icon-warning {
+  opacity: 0;
+  transform: scale(0.3);
+  transform-origin: center;
+  transition: opacity 150ms ease-in, transform 150ms ease-in;
+}
+
+.feedback__icon-success {
+  width: 18px;
+  height: 18px;
+
+  fill: rgb(74, 191, 10);
+}
+
+.feedback__input:not(:placeholder-shown):required:valid
+  ~ .feedback__icon-alert
+  .feedback__icon-success {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.feedback__icon-warning {
+  width: 18px;
+  height: 18px;
+
+  fill: rgb(244, 209, 12);
+}
+
+.feedback__input:not(:placeholder-shown):required:invalid
+  ~ .feedback__icon-alert
+  .feedback__icon-warning {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.feedback__comment {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  min-height: 120px;
+
+  resize: none;
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: $icon-gray;
+
+    opacity: 1;
+  }
+}
+
+.feedback__link {
+  text-decoration: underline;
+  color: $basic-blue;
+  text-underline-position: under;
+}

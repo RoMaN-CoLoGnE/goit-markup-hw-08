@@ -1,0 +1,22 @@
+// gallery styles
+.gallery {
+  @include section-indent;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__list {
+    @include grid();
+  }
+
+  &__item {
+    position: relative;
+
+    @include grid-item(3);
+  }
+}

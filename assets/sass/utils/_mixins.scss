@@ -1,0 +1,110 @@
+// section ident mixin
+@mixin section-indent($pt: 94px, $pb: $pt) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+// $Param [Number] - set vertical indent for sections
+// usage:
+// .section {
+//   @include section-indent(120px);
+// }
+// output:
+// .section {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
+
+// flex mixin
+@mixin flex-center($fd: null, $ai: center, $jc: center, $indent: null) {
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  justify-content: $jc;
+  gap: $indent;
+}
+// todo =========???=========
+// flex mixin with @if
+// @mixin flex($dsp: flex, $fd: false, $ai: center, $jc: center, $indent: false) {
+//   @if $dsp {
+//     display: $dsp;
+//   }
+
+//   @if $fd {
+//     flex-direction: $fd;
+//   }
+
+//   @if $ai {
+//     align-items: $ai;
+//   }
+
+//   @if $jc {
+//     justify-content: $jc;
+//   }
+
+//   @if $indent {
+//     gap: $indent;
+//   }
+// }
+
+// grid mixin
+@mixin grid($indent: 30px) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $indent;
+}
+
+// grid-item mixin
+@mixin grid-item($items: 1, $indent: 30px) {
+  flex-basis: calc((100% - $indent * ($items - 1)) / $items);
+}
+
+// position absolute mixin
+@mixin position-absolute($pos: absolute, $top: false, $right: false, $bot: false, $left: false) {
+  @if $pos {
+    position: $pos;
+  }
+
+  @if $top {
+    top: $top;
+  }
+
+  @if $right {
+    right: $right;
+  }
+
+  @if $bot {
+    bottom: $bot;
+  }
+
+  @if $left {
+    left: $left;
+  }
+}
+// todo =========???=========
+// fonts styles mixin
+// @mixin fonts($family: false, $fw: false, $fs: false, $lh: false, $ls: 0.03em, $cl: false) {
+//   @if $family {
+//     font-family: $family, sans-serif;
+//   }
+
+//   @if $fw {
+//     font-weight: $fw;
+//   }
+
+//   @if $fs {
+//     font-size: $fs;
+//   }
+
+//   @if $lh {
+//     line-height: $lh / $fs;
+//   }
+
+//   @if $ls {
+//     letter-spacing: normal;
+//   }
+
+//   @if $cl {
+//     color: $cl;
+//   }
+// }

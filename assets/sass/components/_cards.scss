@@ -1,0 +1,46 @@
+// cards styles
+.cards {
+  @include grid();
+}
+
+.cards__link {
+  display: block;
+
+  transition: box-shadow $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.cards__thumb {
+  position: relative;
+  overflow: hidden;
+  max-width: 370px;
+  max-height: 294px;
+}
+
+.cards__content {
+  padding: 20px 24px;
+  border: 1px solid $secondary-white;
+  border-top: none;
+}
+
+.cards__title {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: normal;
+  color: $basic-black;
+}
+
+.cards__desc {
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.03em;
+  color: $basic-grey;
+}

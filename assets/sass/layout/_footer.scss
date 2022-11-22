@@ -1,0 +1,50 @@
+// footer styles
+.footer {
+  padding: 60px 0;
+
+  background-color: $secondary-black;
+
+  &__container {
+    @extend %container;
+    @include flex-center($ai: baseline, $indent: 93px);
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__list {
+    @include flex-center($fd: column, $ai: null, $jc: null, $indent: 9px);
+  }
+
+  &__appeal {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $basic-white;
+  }
+}
+// TODO Можно вложить в .footer???
+.footer__link {
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: $link-grey;
+
+  transition: color $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $basic-blue;
+  }
+
+  &--map {
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: $basic-white;
+  }
+}

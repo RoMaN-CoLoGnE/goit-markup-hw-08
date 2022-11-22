@@ -1,0 +1,30 @@
+// contacts styles
+.contacts {
+  @include flex-center($jc: null, $indent: 50px);
+}
+
+.contacts__item {
+  animation: contacts-items-slide-right 1000ms ease-out 2500ms backwards;
+}
+
+.contacts__link {
+  @include flex-center($jc: null, $indent: 10px);
+  padding: 32px 0;
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: $basic-grey;
+  fill: currentColor;
+
+  transition: color $animation-timing-function, fill $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $basic-blue;
+    fill: $basic-blue;
+  }
+}
+
+.contacts__label {
+  color: currentColor;
+}

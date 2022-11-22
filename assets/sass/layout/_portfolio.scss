@@ -1,0 +1,14 @@
+// portfolio styles
+.portfolio {
+  @include section-indent;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__group {
+    @include flex-center($indent: 8px);
+
+    margin-bottom: 50px;
+  }
+}

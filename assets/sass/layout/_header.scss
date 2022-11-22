@@ -1,0 +1,9 @@
+// header styles
+.header {
+  border-bottom: 1px solid $border-grey;
+
+  &__container {
+    @extend %container;
+    @include flex-center($jc: space-between);
+  }
+}
