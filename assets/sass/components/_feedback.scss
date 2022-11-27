@@ -5,25 +5,17 @@
 }
 
 .feedback__appeal {
+  @include fonts($fw: 700, $fs: 20px, $lh: 23px, $cl: getColor('basic-black-cl'));
   display: block;
   margin-bottom: 12px;
 
-  font-weight: 700;
-  font-size: 20px;
-  line-height: calc(23 / 20);
-  letter-spacing: 0.03em;
   text-align: center;
-  color: getColor('basic-black-cl');
 }
 
 .feedback__label {
+  @include fonts($fs: 12px, $lh: 14px, $ls: 0.01em, $cl: getColor('basic-grey-cl'));
   display: block;
   margin-bottom: 4px;
-
-  font-size: 12px;
-  line-height: calc(14 / 12);
-  letter-spacing: 0.01em;
-  color: getColor('basic-grey-cl');
 }
 
 .feedback__field {
@@ -32,12 +24,10 @@
 }
 
 .feedback__input {
+  @include fonts($fs: 12px, $lh: 14px, $ls: 0.01em);
   padding: 12px 42px;
   width: 100%;
 
-  font-size: 12px;
-  line-height: calc(14 / 12);
-  letter-spacing: 0.01em;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
@@ -130,10 +120,7 @@
   resize: none;
 
   &::placeholder {
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    letter-spacing: 0.01em;
-    color: getColor('icon-gray-cl');
+    @include fonts($fs: 12px, $lh: 14px, $ls: 0.01em, $cl: getColor('icon-gray-cl'));
 
     opacity: 1;
   }

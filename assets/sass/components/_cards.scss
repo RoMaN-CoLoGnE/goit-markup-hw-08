@@ -22,7 +22,6 @@
 
 .cards__link {
   display: block;
-
   transition: box-shadow $animation-timing-function;
 
   &:hover,
@@ -33,7 +32,8 @@
 }
 
 .cards__thumb {
-  position: relative;
+  @include position(relative);
+
   overflow: hidden;
 
   @media screen and(max-width: 767.98px) {
@@ -59,18 +59,10 @@
 }
 
 .cards__title {
+  @include fonts($fw: 700, $fs: 18px, $lh: 36px, $cl: getColor('basic-black-cl'));
   margin-bottom: 4px;
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: calc(36 / 18);
-  letter-spacing: normal;
-  color: getColor('basic-black-cl');
 }
 
 .cards__desc {
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.03em;
-  color: getColor('basic-grey-cl');
+  @include fonts($fs: 16px, $lh: 30px, $cl: getColor('basic-grey-cl'));
 }

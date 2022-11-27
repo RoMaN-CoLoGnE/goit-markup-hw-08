@@ -43,21 +43,15 @@
   }
 
   &__appeal {
+    @include fonts($fw: 700, $fs: 14px, $lh: 16px, $cl: getColor('basic-white-cl'));
     margin-bottom: 20px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: getColor('basic-white-cl');
   }
 }
 
 .footer__link {
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
-  color: getColor('link-grey-cl');
+  @include fonts($fs: 14px, $lh: 24px, $cl: getColor('link-grey-cl'));
 
   transition: color $animation-timing-function;
 
@@ -67,9 +61,8 @@
   }
 
   &--map {
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
+    @include fonts($fs: 14px, $lh: 24px, $cl: getColor('basic-white-cl'));
+
     text-decoration: none;
-    color: getColor('basic-white-cl');
   }
 }

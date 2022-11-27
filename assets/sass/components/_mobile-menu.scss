@@ -50,11 +50,7 @@
 }
 
 .mobile-menu__link {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: calc(47 / 40);
-  letter-spacing: 0.02em;
-  color: getColor('basic-black-cl');
+  @include fonts($fw: 500, $fs: 40px, $lh: 47px, $ls: 0.02em, $cl: getColor('basic-black-cl'));
   transition: color $animation-timing-function;
   outline: transparent;
 
@@ -75,14 +71,8 @@
 }
 
 .mobile-menu__contacts-link {
+  @include fonts($fw: 500, $fs: 24px, $lh: 28px, $ls: 0.02em, $cl: getColor('basic-gray-cl'));
   display: block;
-
-  font-weight: 500;
-  font-size: 24px;
-  line-height: calc(28 / 24);
-  letter-spacing: 0.02em;
-
-  color: getColor('basic-gray-cl');
 
   &--large {
     font-size: 34px;
@@ -104,8 +94,5 @@
 }
 
 .mobile-menu__soc-link {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: calc(22 / 18);
-  letter-spacing: 0.02em;
+  @include fonts($fw: 500, $fs: 18px, $lh: 22px, $ls: 0.02em);
 }

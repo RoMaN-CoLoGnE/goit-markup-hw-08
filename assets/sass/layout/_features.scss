@@ -43,18 +43,13 @@
   }
 
   &__subtitle {
+    @include fonts($fw: 700, $fs: 14px, $lh: 16px, $cl: getColor('basic-black-cl'));
     margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.03em;
+
     text-transform: uppercase;
-    color: getColor('basic-black-cl');
   }
 
   &__text {
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
-    color: getColor('basic-grey-cl');
+    @include fonts($fs: 14px, $lh: 24px, $cl: getColor('basic-grey-cl'));
   }
 }

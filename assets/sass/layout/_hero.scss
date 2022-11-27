@@ -52,13 +52,10 @@
   }
 
   &__title {
+    @include fonts($fw: 900, $fs: 26px, $lh: 42px, $ls: 0.06em, $cl: getColor('basic-white-cl'));
     margin: 0 auto;
     max-width: 360px;
-    font-weight: 900;
-    font-size: 26px;
-    line-height: calc(42 / 26);
-    letter-spacing: 0.06em;
-    color: getColor('basic-white-cl');
+
     text-align: center;
     text-transform: uppercase;
 

@@ -6,8 +6,8 @@
   padding: 40px;
 
   background-color: getColor('basic-white-cl');
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px getColor('shadow-12%-cl'), 0px 1px 1px get('shadow-14%-cl'),
+    0px 2px 1px getColor('shadow-20%-cl');
   border-radius: 4px;
 
   transition: transform 300ms ease-out;

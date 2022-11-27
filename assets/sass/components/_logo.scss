@@ -1,13 +1,9 @@
 // site logo styles
 .logo {
+  @include fonts($fw: 700, $fs: 24px, $lh: 28px, $cl: getColor('basic-blue-cl'));
   display: block;
   font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: calc(28 / 24);
-  letter-spacing: 0.03em;
   text-decoration: none;
-  color: getColor('basic-blue-cl');
 
   @media screen and(min-width: 1200px) {
     font-size: 26px;
