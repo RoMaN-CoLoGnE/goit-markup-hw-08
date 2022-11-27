@@ -1,9 +1,13 @@
 // checkbox styles
 .checkbox {
-  @include flex-center($indent: 7px);
+  @include flex($indent: 7px);
 
   margin-bottom: 30px;
   user-select: none;
+
+  @media screen and(max-width: 1199.98px) {
+    font-size: 12px;
+  }
 }
 
 .checkbox__icon {

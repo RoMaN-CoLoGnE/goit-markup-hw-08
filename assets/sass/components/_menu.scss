@@ -1,15 +1,37 @@
-// menu styles
 .menu {
-  @include flex-center($indent: 90px);
+  @include flex($jc: space-between);
+  @media screen and(min-width: 768px) {
+    @include flex();
+  }
+
+  @media screen and(min-width: 1200px) {
+    @include flex($indent: 90px);
+  }
+
+  & .logo {
+    @media screen and(min-width: 768px) and(max-width: 1199.98px) {
+      margin-right: 88px;
+    }
+  }
 
   &__list {
-    @include flex-center($jc: null, $indent: 50px);
+    display: none;
+
+    @media screen and(min-width: 768px) and(max-width: 1199.98px) {
+      @include flex($indent: 50px);
+      margin-right: 96px;
+    }
+
+    @media screen and(min-width: 1200px) {
+      @include flex($indent: 50px);
+    }
   }
 
   &__item {
     position: relative;
-
-    animation: menu-items-slide-right 1000ms ease-out 2500ms backwards;
+    @media screen and(min-width: 1200px) {
+      animation: menu-items-slide-right 1000ms ease-out 2500ms backwards;
+    }
   }
 }
 
@@ -20,26 +42,28 @@
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
-  color: $basic-black;
+  color: getColor('basic-black-cl');
 
   transition: color $animation-timing-function;
 
   &:hover,
   &:focus,
   &--current {
-    color: $basic-blue;
+    color: getColor('basic-blue-cl');
   }
 
   &--current::after {
-    @include position-absolute($bot: 0, $left: 0);
+    @include position($bot: 0, $left: 0);
 
     content: '';
     display: block;
     width: 100%;
     height: 4px;
-    background-color: $basic-blue;
+    background-color: getColor('basic-blue-cl');
     border-radius: 2px;
 
-    animation: link-current-emersion 1000ms ease-in-out 3500ms backwards;
+    @media screen and(min-width: 1200px) {
+      animation: link-current-emersion 1000ms ease-in-out 3500ms backwards;
+    }
   }
 }

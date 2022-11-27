@@ -1,6 +1,6 @@
 // socials styles
 .socials {
-  @include flex-center($indent: 10px);
+  @include flex($indent: 10px);
 
   &__item {
     width: 44px;
@@ -15,25 +15,25 @@
 }
 
 .socials__link {
-  @include flex-center();
+  @include flex();
 
   width: 100%;
   height: 100%;
 
   border-radius: 50%;
-  background-color: $basic-white;
-  color: $icon-gray;
+  background-color: getColor('basic-white-cl');
+  color: getColor('icon-grey-cl');
 
   transition: background-color $animation-timing-function, color $animation-timing-function;
 
   &:hover,
   &:focus {
-    background-color: $basic-blue;
-    color: $basic-white;
+    background-color: getColor('basic-blue-cl');
+    color: getColor('basic-white-cl');
   }
 
   &--secondary {
-    color: $basic-white;
-    background-color: $social-grey;
+    color: getColor('basic-white-cl');
+    background-color: getColor('social-grey-cl');
   }
 }

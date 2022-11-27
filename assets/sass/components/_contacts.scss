@@ -1,27 +1,42 @@
 // contacts styles
 .contacts {
-  @include flex-center($jc: null, $indent: 50px);
+  display: none;
+
+  @media screen and(min-width: 768px) and(max-width: 1199.98px) {
+    @include flex($fd: column, $ai: false, $jc: false, $indent: 10px);
+  }
+
+  @media screen and(min-width: 1200px) {
+    @include flex($indent: 30px);
+  }
 }
 
 .contacts__item {
-  animation: contacts-items-slide-right 1000ms ease-out 2500ms backwards;
+  @media screen and(min-width: 1200px) {
+    animation: contacts-items-slide-right 1000ms ease-out 2500ms backwards;
+  }
 }
 
 .contacts__link {
-  @include flex-center($jc: null, $indent: 10px);
-  padding: 32px 0;
+  @include flex($jc: false, $indent: 8px);
   font-weight: 500;
-  line-height: calc(16 / 14);
+  font-size: 12px;
+  line-height: calc(14 / 12);
   letter-spacing: 0.02em;
-  color: $basic-grey;
+  color: getColor('basic-grey-cl');
   fill: currentColor;
 
   transition: color $animation-timing-function, fill $animation-timing-function;
 
+  @media screen and(min-width: 1200px) {
+    @include flex($indent: 10px);
+    padding: 32px 0;
+    line-height: calc(16 / 14);
+  }
   &:hover,
   &:focus {
-    color: $basic-blue;
-    fill: $basic-blue;
+    color: getColor('basic-blue-cl');
+    fill: getColor('basic-blue-cl');
   }
 }
 

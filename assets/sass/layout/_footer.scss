@@ -1,20 +1,45 @@
-// footer styles
 .footer {
   padding: 60px 0;
 
-  background-color: $secondary-black;
+  background-color: getColor('secondary-black-cl');
 
   &__container {
-    @extend %container;
-    @include flex-center($ai: baseline, $indent: 93px);
+    @include container;
+
+    @media screen and(min-width: 768px) {
+      @include flex($fw: wrap, $ai: baseline);
+    }
+    @media screen and(max-width: 1199.98px) {
+      text-align: center;
+    }
+
+    @media screen and(min-width: 1200px) {
+      @include flex($ai: baseline, $indent: 93px);
+    }
+  }
+  &__contacts {
+    @media screen and(min-width: 768px) and(max-width: 1199.98px) {
+      margin-right: 185px;
+    }
+
+    @media screen and(max-width: 1199.98px) {
+      margin-bottom: 60px;
+    }
   }
 
   &__address {
+    margin-top: 20px;
     font-style: normal;
   }
 
   &__list {
-    @include flex-center($fd: column, $ai: null, $jc: null, $indent: 9px);
+    @include flex($fd: column, $ai: false, $jc: false, $indent: 9px);
+  }
+
+  &__socials {
+    @media screen and(max-width: 767.98px) {
+      margin-bottom: 60px;
+    }
   }
 
   &__appeal {
@@ -25,26 +50,26 @@
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: $basic-white;
+    color: getColor('basic-white-cl');
   }
 }
-// TODO Можно вложить в .footer???
+
 .footer__link {
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
-  color: $link-grey;
+  color: getColor('link-grey-cl');
 
   transition: color $animation-timing-function;
 
   &:hover,
   &:focus {
-    color: $basic-blue;
+    color: getColor('basic-blue-cl');
   }
 
   &--map {
-    line-height: 1.71;
+    line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     text-decoration: none;
-    color: $basic-white;
+    color: getColor('basic-white-cl');
   }
 }

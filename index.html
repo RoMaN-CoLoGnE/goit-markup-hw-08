@@ -5,12 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    /> -->
     <link rel="stylesheet" href="./assets/css/main.min.css" />
   </head>
   <body>
@@ -30,6 +24,11 @@
               <a class="menu__link" href="#">Контакти</a>
             </li>
           </ul>
+          <button class="menu__mobile-menu-btn js-open-menu" type="button">
+            <svg class="mobile-menu__icon-open" width="24" height="16">
+              <use href="assets/images/svg/icons.svg#burger-menu-icon"></use>
+            </svg>
+          </button>
         </nav>
         <ul class="contacts">
           <li class="contacts__item">
@@ -126,9 +125,14 @@
             <li class="gallery__item">
               <img
                 class="gallery__picture"
-                src="./assets/images/jpg/our-work-1.jpg"
+                src="./assets/images/jpg/our-work/our-work-1200-1@1x.jpg"
                 alt="Програмування вебсайтів та додатків"
-                width="370"
+                srcset="
+                  ./assets/images/jpg/our-work/our-work-1200-1@1x.jpg 370w,
+                  ./assets/images/jpg/our-work/our-work-1200-1@2x.jpg 740w
+                "
+                sizes="(min-width: 1200px) 370px, 100vw"
+                loading="lazy"
               />
               <div class="info-overlay">
                 <p class="info-overlay__text">Десктопні додатки</p>
@@ -137,9 +141,14 @@
             <li class="gallery__item">
               <img
                 class="gallery__picture"
-                src="./assets/images/jpg/our-work-2.jpg"
+                src="./assets/images/jpg/our-work/our-work-1200-2@1x.jpg"
                 alt="Адаптивний веб-дизайн сайтів"
-                width="370"
+                srcset="
+                  ./assets/images/jpg/our-work/our-work-1200-2@1x.jpg 370w,
+                  ./assets/images/jpg/our-work/our-work-1200-2@2x.jpg 740w
+                "
+                sizes="(min-width: 1200px) 370px, 100vw"
+                loading="lazy"
               />
               <div class="info-overlay">
                 <p class="info-overlay__text">Мобільні додатки</p>
@@ -148,9 +157,14 @@
             <li class="gallery__item">
               <img
                 class="gallery__picture"
-                src="./assets/images/jpg/our-work-3.jpg"
+                src="./assets/images/jpg/our-work/our-work-1200-2@1x.jpg"
                 alt="Вибір кольору та дизайну сайту"
-                width="370"
+                srcset="
+                  ./assets/images/jpg/our-work/our-work-1200-3@1x.jpg 370w,
+                  ./assets/images/jpg/our-work/our-work-1200-3@2x.jpg 740w
+                "
+                sizes="(min-width: 1200px) 370px, 100vw"
+                loading="lazy"
               />
               <div class="info-overlay">
                 <p class="info-overlay__text">Дизайнерські рішення</p>
@@ -167,9 +181,18 @@
             <li class="our-team__item">
               <img
                 class="our-team__picture"
-                src="./assets/images/jpg/employee-1.jpg"
+                src="./assets/images/jpg/our-team/our-team-480-1@1x.jpg"
                 alt="Ігор Дем'яненко"
-                width="270"
+                srcset="
+                  ./assets/images/jpg/our-team/our-team-480-1@1x.jpg  450w,
+                  ./assets/images/jpg/our-team/our-team-480-1@2x.jpg  900w,
+                  ./assets/images/jpg/our-team/our-team-768-1@1x.jpg  354w,
+                  ./assets/images/jpg/our-team/our-team-768-1@2x.jpg  708w,
+                  ./assets/images/jpg/our-team/our-team-1200-1@1x.jpg 270w,
+                  ./assets/images/jpg/our-team/our-team-1200-1@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                loading="lazy"
               />
               <div class="our-team__wrapper">
                 <h3 class="our-team__subtitle">Ігор Дем'яненко</h3>
@@ -209,9 +232,18 @@
             <li class="our-team__item">
               <img
                 class="our-team__picture"
-                src="./assets/images/jpg/employee-2.jpg"
+                src="./assets/images/jpg/our-team/our-team-480-2@1x.jpg"
                 alt="Ольга Рєпіна"
-                width="270"
+                srcset="
+                  ./assets/images/jpg/our-team/our-team-480-2@1x.jpg  450w,
+                  ./assets/images/jpg/our-team/our-team-480-2@2x.jpg  900w,
+                  ./assets/images/jpg/our-team/our-team-768-2@1x.jpg  354w,
+                  ./assets/images/jpg/our-team/our-team-768-2@2x.jpg  708w,
+                  ./assets/images/jpg/our-team/our-team-1200-2@1x.jpg 270w,
+                  ./assets/images/jpg/our-team/our-team-1200-2@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                loading="lazy"
               />
               <div class="our-team__wrapper">
                 <h3 class="our-team__subtitle">Ольга Рєпіна</h3>
@@ -251,9 +283,18 @@
             <li class="our-team__item">
               <img
                 class="our-team__picture"
-                src="./assets/images/jpg/employee-3.jpg"
+                src="./assets/images/jpg/our-team/our-team-480-3@1x.jpg"
                 alt="Микола Тарасов"
-                width="270"
+                srcset="
+                  ./assets/images/jpg/our-team/our-team-480-3@1x.jpg  450w,
+                  ./assets/images/jpg/our-team/our-team-480-3@2x.jpg  900w,
+                  ./assets/images/jpg/our-team/our-team-768-3@1x.jpg  354w,
+                  ./assets/images/jpg/our-team/our-team-768-3@2x.jpg  708w,
+                  ./assets/images/jpg/our-team/our-team-1200-3@1x.jpg 270w,
+                  ./assets/images/jpg/our-team/our-team-1200-3@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                loading="lazy"
               />
               <div class="our-team__wrapper">
                 <h3 class="our-team__subtitle">Микола Тарасов</h3>
@@ -293,9 +334,18 @@
             <li class="our-team__item">
               <img
                 class="our-team__picture"
-                src="./assets/images/jpg/employee-4.jpg"
+                src="./assets/images/jpg/our-team/our-team-480-4@1x.jpg"
                 alt="Михайло Єрмаков"
-                width="270"
+                srcset="
+                  ./assets/images/jpg/our-team/our-team-480-4@1x.jpg  450w,
+                  ./assets/images/jpg/our-team/our-team-480-4@2x.jpg  900w,
+                  ./assets/images/jpg/our-team/our-team-768-4@1x.jpg  354w,
+                  ./assets/images/jpg/our-team/our-team-768-4@2x.jpg  708w,
+                  ./assets/images/jpg/our-team/our-team-1200-4@1x.jpg 270w,
+                  ./assets/images/jpg/our-team/our-team-1200-4@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                loading="lazy"
               />
               <div class="our-team__wrapper">
                 <h3 class="our-team__subtitle">Михайло Єрмаков</h3>
@@ -399,8 +449,7 @@
                   href="https://goo.gl/maps/8viNXfXdV3uJQZfFA"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                >
-                  м. Київ, пр-т Лесі Українки, 26
+                  >м. Київ, пр-т Лесі Українки, 26
                 </a>
               </li>
               <li class="footer__item">
@@ -464,6 +513,9 @@
             </label>
             <button class="subscribe__button" type="submit" aria-label="Кнопка підписатися">
               Підписатися
+              <svg class="subscribe__icon" width="24" height="24">
+                <use href="./assets/images/svg/icons.svg#subscribe-icon"></use>
+              </svg>
             </button>
           </div>
         </form>
@@ -584,13 +636,73 @@
                 href="./assets/images/svg/icons.svg#icon-check2"
               ></use>
             </svg>
-            Погоджуюся з розсилкою та приймаю
-            <a class="feedback__link" href="#">Умови договору</a>
+            <span>
+              Погоджуюся з розсилкою та приймаю
+              <a class="feedback__link" href="#">Умови договору</a>
+            </span>
           </label>
           <button class="feedback__button button" type="submit">Відправити</button>
         </form>
       </div>
     </div>
+
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <div class="mobile-menu__container">
+        <button class="mobile-menu__btn-close js-close-menu">
+          <svg class="mobile-menu__icon-close" width="19" height="19">
+            <use href="assets/images/svg/icons.svg#mobile-menu-close-icon"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./index.html">Студія</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">Контакти</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__contacts">
+          <li class="mobile-menu__contacts-item">
+            <a
+              class="mobile-menu__contacts-link mobile-menu__contacts-link--large"
+              href="tel:+380961111111"
+            >
+              +38 096 111 11 11
+            </a>
+          </li>
+          <li class="mobile-menu__contacts-item">
+            <a class="mobile-menu__contacts-link" href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__soc">
+          <li class="mobile-menu__soc-item">
+            <a class="mobile-menu__soc-link" href="#">Instagram</a>
+          </li>
+          <li class="mobile-menu__soc-item">
+            <a class="mobile-menu__soc-link" href="#">Twitter</a>
+          </li>
+          <li class="mobile-menu__soc-item">
+            <a class="mobile-menu__soc-link" href="#">Facebook</a>
+          </li>
+          <li class="mobile-menu__soc-item">
+            <a class="mobile-menu__soc-link" href="#">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <script src="./assets/js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="assets/js/mobile-menu.js"></script>
   </body>
 </html>

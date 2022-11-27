@@ -1,26 +1,25 @@
 // site logo styles
 .logo {
   display: block;
-  padding: 20px 0;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
+  font-size: 24px;
+  line-height: calc(28 / 24);
   letter-spacing: 0.03em;
   text-decoration: none;
-  color: $basic-blue;
+  color: getColor('basic-blue-cl');
 
-  animation-name: logo-font-weight;
-  animation-delay: 500ms;
-  animation-duration: 2000ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
+  @media screen and(min-width: 1200px) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    animation: logo-font-weight 2000ms ease-in-out 500ms both;
+  }
 
   &__tail-dark {
-    color: $deep-black;
+    color: getColor('deep-black-cl');
   }
 
   &__tail-light {
-    color: $basic-white;
+    color: getColor('basic-white-cl');
   }
 }

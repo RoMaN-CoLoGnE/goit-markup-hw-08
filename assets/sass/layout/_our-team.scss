@@ -1,11 +1,15 @@
 // our team styles
 .our-team {
-  @include section-indent;
+  @include section-indent($pt: 60px);
 
-  background-color: $secondary-grey;
+  @media screen and(min-width: 1200px) {
+    @include section-indent();
+  }
+
+  background-color: getColor('secondary-grey-cl');
 
   &__container {
-    @extend %container;
+    @include container;
   }
 
   &__title {
@@ -13,16 +17,29 @@
   }
 
   &__list {
-    @include grid();
+    @media screen and(min-width: 768px) {
+      @include grid();
+    }
   }
 
   &__item {
-    @include grid-item(4);
+    @media screen and(max-width: 767.98px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and(min-width: 768px) {
+      @include grid-item(2);
+    }
+
+    @media screen and(min-width: 1200px) {
+      @include grid-item(4);
+    }
 
     border-radius: 0px 0px 4px 4px;
     text-align: center;
-    color: $basic-grey;
-    background-color: $basic-white;
+    color: getColor('basic-grey-cl');
+    background-color: getColor('basic-white-cl');
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
   }
@@ -37,7 +54,7 @@
     font-size: 16px;
     line-height: calc(19 / 16);
     letter-spacing: 0.03em;
-    color: $basic-black;
+    color: getColor('basic-black-cl');
   }
 
   &__text {

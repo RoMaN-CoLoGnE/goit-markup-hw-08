@@ -1,9 +1,15 @@
-// header styles
 .header {
-  border-bottom: 1px solid $border-grey;
+  border-bottom: 1px solid getColor('border-gray-cl');
+
+  @media screen and(max-width: 767.98px) {
+    padding: 10px 0;
+  }
 
   &__container {
-    @extend %container;
-    @include flex-center($jc: space-between);
+    @include container;
+
+    @media screen and(min-width: 768px) {
+      @include flex($jc: space-between);
+    }
   }
 }

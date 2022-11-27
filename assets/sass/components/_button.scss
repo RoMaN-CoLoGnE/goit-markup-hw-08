@@ -1,31 +1,79 @@
-// button styles
+.menu__mobile-menu-btn {
+  @media screen and(min-width: 768px) {
+    display: none;
+  }
+  @include flex();
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
 .hero__button {
   @extend %button;
 
-  min-width: 216px;
   margin-top: 30px;
   transition: background-color $animation-timing-function, box-shadow $animation-timing-function;
 
   &:hover,
   &:focus {
-    background-color: $secondary-blue;
+    background-color: getColor('secondary-blue-cl');
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  @media screen and(min-width: 1200px) {
+    min-width: 216px;
   }
 }
 
 .subscribe__button {
+  @include position($pos: relative);
   @extend %button;
+  justify-content: flex-end;
+  padding-right: 64px;
+  transition: background-color $animation-timing-function, box-shadow $animation-timing-function;
 
-  gap: 10px;
+  &:hover,
+  &:focus {
+    background-color: getColor('secondary-blue-cl');
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 
-  &::after {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 24px;
+  .subscribe__icon {
+    @include position($top: 13px, $right: 28px);
+  }
 
-    background-image: url(../images/png/icon-send.png);
-    color: $basic-white;
+  // icon option with ::after
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   width: 24px;
+  //   height: 24px;
+
+  //   background-image: url(../images/png/icon-send.png);
+  //   color: getColor('basic-white-cl');
+  // }
+}
+
+.modal__close-button {
+  @include flex();
+  @include position($top: 8px, $right: 8px);
+
+  padding: 0;
+  width: 30px;
+  height: 30px;
+
+  background-color: unset;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: fill $animation-timing-function;
+
+  &:hover {
+    fill: getColor('basic-blue-cl');
   }
 }
 
@@ -39,7 +87,7 @@
 
   &:hover,
   &:focus {
-    background-color: $secondary-blue;
+    background-color: getColor('secondary-blue-cl');
   }
 }
 
@@ -55,7 +103,7 @@
   text-align: center;
 
   // color: $basic-black;
-  background-color: $secondary-grey;
+  background-color: getColor('secondary-grey-cl');
   box-shadow: none;
   cursor: pointer;
 
@@ -64,29 +112,9 @@
 
   &:hover,
   &:focus {
-    color: $basic-white;
-    background-color: $basic-blue;
+    color: getColor('basic-white-cl');
+    background-color: getColor('basic-blue-cl');
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
-}
-
-.modal__close-button {
-  @include flex-center();
-  @include position-absolute($top: 8px, $right: 8px);
-
-  padding: 0;
-  width: 30px;
-  height: 30px;
-
-  background-color: unset;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
-
-  transition: fill $animation-timing-function;
-
-  &:hover {
-    fill: $basic-blue;
   }
 }

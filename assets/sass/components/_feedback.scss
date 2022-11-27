@@ -13,7 +13,7 @@
   line-height: calc(23 / 20);
   letter-spacing: 0.03em;
   text-align: center;
-  color: $basic-black;
+  color: getColor('basic-black-cl');
 }
 
 .feedback__label {
@@ -23,7 +23,7 @@
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
-  color: $basic-grey;
+  color: getColor('basic-grey-cl');
 }
 
 .feedback__field {
@@ -45,13 +45,13 @@
   transition: border-color $animation-timing-function;
 
   &:focus {
-    border-color: $basic-blue;
+    border-color: getColor('basic-blue-cl');
   }
 
   &::placeholder {
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
-    color: $comment-grey;
+    color: getColor('comment-grey-cl');
 
     opacity: 0;
     transition: opacity $animation-timing-function;
@@ -62,24 +62,24 @@
 }
 
 .feedback__icon {
-  @include position-absolute($top: 50%, $left: 12px);
+  @include position($top: 50%, $left: 12px);
 
   width: 18px;
   height: 18px;
 
   pointer-events: none;
   transform: translateY(-50%);
-  fill: $basic-black;
+  fill: getColor('basic-black-cl');
 
   transition: fill $animation-timing-function;
 }
 
 .feedback__input:focus + .feedback__icon {
-  fill: $basic-blue;
+  fill: getColor('basic-blue-cl');
 }
 
 .feedback__icon-alert {
-  @include position-absolute($top: 50%, $right: 12px);
+  @include position($top: 50%, $right: 12px);
 
   width: 18px;
   height: 18px;
@@ -98,7 +98,7 @@
   width: 18px;
   height: 18px;
 
-  fill: rgb(74, 191, 10);
+  fill: getColor('success-green-cl');
 }
 
 .feedback__input:not(:placeholder-shown):required:valid
@@ -112,7 +112,7 @@
   width: 18px;
   height: 18px;
 
-  fill: rgb(244, 209, 12);
+  fill: getColor('warning-yellow-cl');
 }
 
 .feedback__input:not(:placeholder-shown):required:invalid
@@ -133,7 +133,7 @@
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
-    color: $icon-gray;
+    color: getColor('icon-gray-cl');
 
     opacity: 1;
   }
@@ -141,6 +141,6 @@
 
 .feedback__link {
   text-decoration: underline;
-  color: $basic-blue;
+  color: getColor('basic-blue-cl');
   text-underline-position: under;
 }

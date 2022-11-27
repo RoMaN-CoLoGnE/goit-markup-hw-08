@@ -1,6 +1,23 @@
 // cards styles
 .cards {
-  @include grid();
+  @media screen and(min-width: 768px) {
+    @include grid();
+  }
+}
+
+.cards__item {
+  @media screen and(max-width: 767.98px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and(min-width: 768px) {
+    @include grid-item(2);
+  }
+
+  @media screen and(min-width: 1200px) {
+    @include grid-item(3);
+  }
 }
 
 .cards__link {
@@ -18,13 +35,26 @@
 .cards__thumb {
   position: relative;
   overflow: hidden;
-  max-width: 370px;
-  max-height: 294px;
+
+  @media screen and(max-width: 767.98px) {
+    max-width: 450px;
+    max-height: 404px;
+  }
+
+  @media screen and(min-width: 768px) {
+    max-width: 354px;
+    max-height: 440px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    max-width: 370px;
+    max-height: 294px;
+  }
 }
 
 .cards__content {
   padding: 20px 24px;
-  border: 1px solid $secondary-white;
+  border: 1px solid getColor('secondary-white-cl');
   border-top: none;
 }
 
@@ -35,12 +65,12 @@
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: normal;
-  color: $basic-black;
+  color: getColor('basic-black-cl');
 }
 
 .cards__desc {
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
-  color: $basic-grey;
+  color: getColor('basic-grey-cl');
 }

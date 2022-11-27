@@ -1,42 +1,56 @@
 // partners styles
 .partners {
-  @include section-indent;
+  @include section-indent(60px);
+
+  @media screen and(min-width: 1200px) {
+    @include section-indent();
+  }
 
   &__container {
-    @extend %container;
+    @include container;
   }
 
   &__title {
     @extend %section-title;
   }
 }
-
 .partners__list {
   @include grid();
 }
 
 .partners__item {
-  @include grid-item(6);
+  @media screen and(max-width: 767.98px) {
+    @include grid-item(2);
+  }
+
+  @media screen and(min-width: 768px) {
+    @include grid-item(3);
+  }
+
+  @media screen and(min-width: 1200px) {
+    @include grid-item(6);
+  }
+
   width: 170px;
   height: 92px;
 }
 
 .partners__link {
-  @include flex-center();
+  @include flex();
 
   width: 100%;
   height: 100%;
-  border: 1px solid $icon-gray;
+  border: 1px solid getColor('icon-grey-cl');
   border-radius: 4px;
 
-  color: $icon-gray;
+  color: getColor('icon-grey-cl');
 
   transition: color $animation-timing-function, border-color $animation-timing-function;
 
   &:hover,
   &:focus {
-    color: $basic-blue;
-    border-color: $basic-blue;
+    color: getColor('basic-blue-cl');
+    border-color: getColor('basic-blue-cl');
   }
 }
 

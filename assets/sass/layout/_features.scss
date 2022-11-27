@@ -1,26 +1,38 @@
 // features styles
 .features {
-  @include section-indent($pb: 0);
+  @include section-indent($pt: 60px);
+
+  @media screen and(min-width: 1200px) {
+    @include section-indent($pb: 0);
+  }
 
   &__container {
-    @extend %container;
+    @include container;
   }
 
   &__list {
-    @include grid();
+    @media screen and(min-width: 768px) {
+      @include grid();
+    }
   }
 
   &__item {
-    @include grid-item(4);
+    @media screen and(min-width: 768px) and(max-width: 1199.98px) {
+      @include grid-item(2);
+    }
+
+    @media screen and(min-width: 1200px) {
+      @include grid-item(4);
+    }
   }
 
   &__wrapper {
-    @include flex-center();
+    @include flex();
 
     position: relative;
 
     height: 120px;
-    background: $secondary-grey;
+    background: getColor('secondary-grey-cl');
     border-radius: 4px;
     margin-bottom: 30px;
   }
@@ -37,12 +49,12 @@
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: $basic-black;
+    color: getColor('basic-black-cl');
   }
 
   &__text {
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
-    color: $basic-grey;
+    color: getColor('basic-grey-cl');
   }
 }

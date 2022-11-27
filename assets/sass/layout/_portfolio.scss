@@ -1,14 +1,25 @@
 // portfolio styles
 .portfolio {
-  @include section-indent;
+  @include section-indent($pt: 60px);
+
+  @media screen and(min-width: 1200px) {
+    @include section-indent();
+  }
 
   &__container {
-    @extend %container;
+    @include container;
   }
 
   &__group {
-    @include flex-center($indent: 8px);
-
+    @include flex($fw: wrap, $jc: false, $indent: 15px 8px);
     margin-bottom: 50px;
+
+    @media screen and(max-width: 767.98px) {
+      max-width: 326px;
+    }
+
+    @media screen and(min-width: 768px) {
+      justify-content: center;
+    }
   }
 }

@@ -1,28 +1,34 @@
-// Variables colors
-// white-colors
-$basic-white: #ffffff;
-$secondary-white: #eeeeee;
+// color variables map
+$colors: (
+  // white-cl
+  'basic-white-cl': #ffffff,
+  'secondary-white-cl': #eeeeee,
+  // black-cl
+  'basic-black-cl': #212121,
+  'secondary-black-cl': #2f303a,
+  'deep-black-cl': #000000,
+  // gray-cl
+  'basic-grey-cl': #757575,
+  'secondary-grey-cl': #f5f4fa,
+  'border-grey-cl': #ececec,
+  'form-border-grey-cl': rgba(255, 255, 255, 0.3),
+  'icon-grey-cl': #afb1b8,
+  'link-grey-cl': rgba(255, 255, 255, 0.6),
+  'social-grey-cl': rgba(255, 255, 255, 0.1),
+  'comment-grey-cl': rgba(117, 117, 117, 0.5),
+  'shadow-grey-cl': rgba(0, 0, 0, 0.15),
+  // blue-cl
+  'basic-blue-cl': #2196f3,
+  'secondary-blue-cl': #188ce8,
+  'overlay-blue-cl': rgba(33, 150, 243, 0.9),
+  // feedback warning icons-cl
+  'success-green-cl': rgb(74, 191, 10),
+  'warning-yellow-cl': rgb(244, 209, 12)
+);
+// function for colors-map
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
 
-// gray-colors
-$basic-grey: #757575;
-$secondary-grey: #f5f4fa;
-$border-grey: #ececec;
-$form-border-grey: rgba(255, 255, 255, 0.3);
-$icon-gray: #afb1b8;
-$link-grey: rgba(255, 255, 255, 0.6);
-$social-grey: rgba(255, 255, 255, 0.1);
-$comment-grey: rgba(117, 117, 117, 0.5);
-$shadow-grey: rgba(0, 0, 0, 0.15);
-
-// black-colors
-$basic-black: #212121;
-$secondary-black: #2f303a;
-$deep-black: #000000;
-
-// blue-colors
-$basic-blue: #2196f3;
-$secondary-blue: #188ce8;
-$overlay-blue: rgba(33, 150, 243, 0.9);
-
-// Variables animation
+// animations variables
 $animation-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
