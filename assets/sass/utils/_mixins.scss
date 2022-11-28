@@ -93,6 +93,7 @@
   flex-basis: calc((100% - $indent * ($items - 1)) / $items);
 }
 
+// fonts mixin
 @mixin fonts($fw: false, $fs: false, $lh: false, $ls: 0.03em, $cl: false) {
   @if $fw {
     font-weight: $fw;

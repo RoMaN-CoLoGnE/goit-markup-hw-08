@@ -2,7 +2,6 @@
 body {
   @include fonts($fs: 14px, $cl: getColor('basic-grey-cl'));
   font-family: 'Roboto', sans-serif;
-  // font-size: 14px;
-  // color: getColor('basic-grey-cl');
+
   background-color: getColor('basic-white-cl');
 }
