@@ -12,6 +12,10 @@
 
   &__title {
     @extend %section-title;
+
+    @media screen and(min-width: 1200px) {
+      margin-bottom: 50px;
+    }
   }
 }
 .partners__list {
