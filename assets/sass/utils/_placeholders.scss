@@ -2,7 +2,7 @@
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 28px;
-  line-height: calc(42 / 36);
+  line-height: calc(33 / 28);
   letter-spacing: 0.03em;
   text-align: center;
 
@@ -10,6 +10,7 @@
 
   @media screen and (min-width: 1200px) {
     font-size: 36px;
+    line-height: calc(42 / 36);
   }
 }
 
